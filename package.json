@@ -1,0 +1,21 @@
+{
+  "name": "xlsx-db",
+  "version": "1.0.0",
+  "description": "XLSX database interface for JavaScript",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "xlsx",
+    "database",
+    "db"
+  ],
+  "author": "kneuroth",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^9.2.0",
+    "xlsx": "^0.18.0"
+  }
+}
