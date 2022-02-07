@@ -14,7 +14,6 @@ export default function init_test_files() {
     file.Sheets.Sheet1 = xlsx.utils.json_to_sheet(sheetJson)
     xlsx.writeFile(file, test1FilePath)
 
-
     
 
 }

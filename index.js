@@ -1,3 +1,11 @@
 import methods from './lib/xlsx/methods.js'
-methods.post({test: "A"}, 'testFiles/neverExists.xlsx')
-//console.log('Current directory: ' + process.cwd());
+
+export default {
+    
+    FindById: methods.findById, 
+    Find: methods.find, 
+    Post: methods.post, 
+    Remove: methods.remove, 
+    Pattch: methods.patch 
+
+}
