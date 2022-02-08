@@ -14,6 +14,10 @@
   ],
   "author": "kneuroth",
   "license": "ISC",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/kneuroth/xlsx-db.git"
+  },
   "dependencies": {
     "mocha": "^9.2.0",
     "xlsx": "^0.18.0"

@@ -1,6 +1,6 @@
 import assert from "assert"
 
-import Algorithms from "../lib/algorithms.js"
+import Algorithms from "../lib/js/algorithms.js"
 
 
 
