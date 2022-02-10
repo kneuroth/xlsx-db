@@ -1,5 +1,6 @@
 import methods from './lib/xlsx/methods.js';
 
+console.log(methods.findById(0, "testFiles/findByIdTest1.xlsx"));
 
 
 export default {
