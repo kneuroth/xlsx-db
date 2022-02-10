@@ -4,7 +4,7 @@ import xlsx from 'xlsx'
 export default function init_test_files() {
 
     /**
-     * Empty exmpty.xlsx file
+     * Empty empty.xlsx file
      */
     (function prepEmpty() {
         const emptyFilepath = 'testFiles/empty.xlsx';
