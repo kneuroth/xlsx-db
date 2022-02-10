@@ -27,8 +27,8 @@ describe('Algorithms', () => {
         it('should return 4 when given [-1, 2, 0, 1, 3, -3]', () => {
             assert.equal(Algorithms.getLowestAvailableInt([-1, 2, 0, 1, 3, -3]), 4); 
         })
-        it('should throw an error when given empty array', () => {
-            assert.throws(() => { Algorithms.getLowestAvailableInt([]) }, Error)
+        it('should return 0 when given an empty array', () => {
+            assert.equal(Algorithms.getLowestAvailableInt([]), 0)
         })
 
     })

@@ -21,5 +21,9 @@ describe('Methods', () => {
             assert.equal(result.id, 1)
             assert.equal(result.test, "A")
         })
+
+        it('should throw an error when passing a non-existant filepath', () => {
+            assert.throws(() => { methods.post({ test: "A" }, 'testFiles/nonexistant.xlsx') })
+        })
     })
 })

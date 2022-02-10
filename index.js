@@ -1,4 +1,6 @@
-import methods from './lib/xlsx/methods.js'
+import methods from './lib/xlsx/methods.js';
+
+
 
 export default {
     
@@ -6,6 +8,8 @@ export default {
     Find: methods.find, 
     Post: methods.post, 
     Remove: methods.remove, 
-    Pattch: methods.patch 
+    Patch: methods.patch 
 
 }
+
+
