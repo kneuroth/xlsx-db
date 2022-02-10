@@ -1,6 +1,6 @@
-import assert from "assert"
+import assert from "assert";
 
-import Algorithms from "../lib/js/algorithms.js"
+import Algorithms from "../lib/js/algorithms.js";
 
 
 
@@ -31,5 +31,10 @@ describe('Algorithms', () => {
             assert.equal(Algorithms.getLowestAvailableInt([]), 0)
         })
 
+    })
+    describe('#haveSameData', () => {
+        it('should return true for { A: 1 } and { A: 1}', () => {
+            assert.equal(Algorithms.haveSameData({A: 1}, {A: 1}), true)
+        })
     })
 })
