@@ -44,11 +44,11 @@ Adds a record to a file that already exists. Ids are generated automatically usi
 ```html
 xlsxdb.post(<record>, <X>)
 ```
-Where <record> (object) is the record and <X> (string) is th filepath.
+Where `<record>` (object) is the record and `<X>` (string) is th filepath.
 
 ### **patch**
 Edits a record by id in a file that alread exists. Must pass in a record that includes the id (int) field:
 ```html
 xlsxdb.patch(<record>, <filepath>)
 ```
-Where `<record>` is the record with updated fields and id, and `<filepath>` is the filepath.
+Where `<record>` (object) is the record with updated fields and id, and `<filepath>` (string) is the filepath.
