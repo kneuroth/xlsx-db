@@ -9,37 +9,21 @@ init_test_files()
 describe('Methods', () => {
 
     describe('#findById', () => {
-
+        // FIND BY ID TEST 1
         it('Finds a single record with id 0.', () => {
-            assert.equal(algorithms.haveSameData(methods.findById(0, 'testFiles/findByIdTest1.xlsx'), { id: 0, test: 'A' }), true);
+            assert.equal(algorithms.haveSameData(methods.findById(0, 'testFiles/findById-test-1.xlsx'), { id: 0, test: 'A' }), true);
         })
-
+        // FIND BY ID NON-EXISTANT TEST (2)
         it('Throws an error when passing a non-existant filepath', () => {
             assert.throws(() => { methods.findById(0, 'testfiles/nonexistant.xlsx') });
         })
     })
 
-    
-    describe('#post', () => {
-        
-        it('Adds a single record to empty.xlsx', () => {
-            assert.equal(algorithms.haveSameData(methods.post({ test: "A" }, 'testFiles/empty.xlsx'), { id: 0, test: 'A' }), true);
-        })
-
-        it('Adds a single record to hasOne.xlsx with id 1', () => {
-            assert.equal(algorithms.haveSameData( methods.post({ test: "A" }, 'testFiles/hasOne.xlsx'),{ id: 1 , test: 'A'}), true);
-        })
-
-        it('Throws an error when passing a non-existant filepath', () => {
-            assert.throws(() => { methods.post({ test: "A" }, 'testFiles/nonexistant.xlsx') });
-        })
-
-    })
-
     describe('#find', () => {
 
-        it('Returns all records in a sheet', () => {
-            let result = methods.find('testFiles/findAll.xlsx');
+        //FIND TEST 1
+        it('Returns all records in a sheet.', () => {
+            let result = methods.find('testFiles/find-test-1.xlsx');
             let expected = [
                 {
                     id: 0,
@@ -55,8 +39,37 @@ describe('Methods', () => {
             }
         })
 
-        it('Throws an error when passed non-existant filepath', () => {
+        // FIND TEST 2
+        it('Returns an empty array when passed a completely empty sheet.', () => {
+            assert.equal(methods.find('testFiles/find-test-2.xlsx').length, 0);
+        })
+
+        // FIND TEST 3
+        it('Returns an empty array when passed a sheet with keys but no values.', () => {
+            assert.equal(methods.find('testFiles/find-test-3.xlsx').length, 0);
+        })
+        // FIND NON-EXISTANT TEST (4)
+        it('Throws an error when passed non-existant filepath.', () => {
             assert.throws(() => { methods.find('testFiles/nonexistant.xlsx')});
         })
     })
+
+    
+    describe('#post', () => {
+        
+        it('Adds a single record to empty.xlsx', () => {
+            assert.equal(algorithms.haveSameData(methods.post({ test: "A" }, 'testFiles/post-test-1-empty.xlsx'), { id: 0, test: 'A' }), true);
+        })
+
+        it('Adds a single record to hasOne.xlsx with id 1', () => {
+            assert.equal(algorithms.haveSameData( methods.post({ test: "A" }, 'testFiles/post-test-2-has-one.xlsx'),{ id: 1 , test: 'A'}), true);
+        })
+
+        it('Throws an error when passing a non-existant filepath', () => {
+            assert.throws(() => { methods.post({ test: "A" }, 'testFiles/nonexistant.xlsx') });
+        })
+
+    })
+
+     
 })
