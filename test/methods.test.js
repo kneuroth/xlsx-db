@@ -57,16 +57,27 @@ describe('Methods', () => {
     
     describe('#post', () => {
         
-        it('Adds a single record to empty.xlsx', () => {
+        it('Adds a single record to posst-test-1-empty.xlsx', () => {
             assert.equal(algorithms.haveSameData(methods.post({ test: "A" }, 'testFiles/post-test-1-empty.xlsx'), { id: 0, test: 'A' }), true);
         })
 
-        it('Adds a single record to hasOne.xlsx with id 1', () => {
+        it('Adds a single record to post-test-1-has-one.xlsx with id 1', () => {
             assert.equal(algorithms.haveSameData( methods.post({ test: "A" }, 'testFiles/post-test-2-has-one.xlsx'),{ id: 1 , test: 'A'}), true);
         })
 
         it('Throws an error when passing a non-existant filepath', () => {
             assert.throws(() => { methods.post({ test: "A" }, 'testFiles/nonexistant.xlsx') });
+        })
+
+    })
+
+    describe('#patch', () => {
+        
+        it('Updates a single record with a change to col1, excludes col2', () => {
+            assert.equal(algorithms.haveSameData(methods.patch({ id: 0, col1: "C" }, 'testFiles/patch-test-1.xlsx'), { id: 0, col1: 'C', col2: 'B' }), true);
+        })
+        it('Updates a single record with a change to col1, includes col2', () => {
+            assert.equal(algorithms.haveSameData(methods.patch({ id: 0, col1: "C", col2:"B" }, 'testFiles/patch-test-2.xlsx'), { id: 0, col1: 'C', col2: 'B' }), true);
         })
 
     })
