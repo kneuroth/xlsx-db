@@ -8,8 +8,8 @@ export default {
     Find: methods.find, 
     Post: methods.post, 
     Remove: methods.remove, 
-    Patch: methods.patch 
+    Patch: methods.patch,
+    Populate: methods.populate,
+    Clear: methods.clear
 
 }
-
-
