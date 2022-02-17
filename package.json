@@ -1,6 +1,6 @@
 {
   "name": "xlsx-db",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "XLSX database interface for JavaScript",
   "type": "module",
   "main": "index.js",
